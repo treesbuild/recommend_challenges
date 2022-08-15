@@ -1,0 +1,47 @@
+import pandas as pd
+import numpy as np
+rating_df = pd.read_csv(r'rec\user_challenges_likes_v2.csv')
+r_df = rating_df.pivot(index='user_id', columns = 'challenge_id', values='score').fillna(0)
+R = r_df.values
+user_ratings_mean = np.mean(R, axis = 1)
+R_demeaned = R - user_ratings_mean.reshape(-1, 1)
+from scipy.sparse.linalg import svds
+U, sigma, Vt = svds(R_demeaned, k = 50)
+sigma = np.diag(sigma)
+all_user_predicted_ratings = np.dot(np.dot(U, sigma), Vt) + user_ratings_mean.reshape(-1, 1)
+preds_df = pd.DataFrame(all_user_predicted_ratings, columns = r_df.columns)
+print(preds_df)
+preds_df.to_pickle(r'rec\svd_model.pickle')
+def recommend_plan(predictions_df, user_id, plan_df, original_ratings_df, num_recommendations=5):
+    
+    # Get and sort the user's predictions
+    user_row_number = user_id - 1 # user_id starts at 1, not 0
+    sorted_user_predictions = predictions_df.iloc[user_row_number].sort_values(ascending=False)
+    # Get the user's data and merge in the plan information.
+    user_data = original_ratings_df[original_ratings_df.user_id == (user_id)]
+    user_full = (user_data.merge(plan_df, how = 'left', left_on = 'challenge_id', right_on = 'challenge_id').
+                     sort_values(['score'], ascending=False))
+    print('User {0} has already rated {1} plans.'.format(user_id, user_full.shape[0]))
+    print('Recommending the highest {0} predicted ratings plan not already rated.'.format(num_recommendations))
+    # Recommend the highest predicted rating plan that the user hasn't seen yet.
+    recommendations = (plan_df[~plan_df['challenge_id'].isin(user_full['challenge_id'])].  #filter out rated plans
+         merge(pd.DataFrame(sorted_user_predictions).reset_index(), how = 'left', #merge predictions on path_id
+               left_on = 'challenge_id',
+               right_on = 'challenge_id').
+         rename(columns = {user_row_number: 'Predictions'}). #rename the column with user_id prediction and sort the table based on it. 
+         sort_values('Predictions', ascending = False).
+                       iloc[:num_recommendations, :-1]
+                      )
+
+    return user_full, recommendations
+
+plan_df = pd.read_csv('rec\challenges_data.csv')
+# recommend the plan for user 84, you can change it to other users
+already_rated, predictions = recommend_plan(preds_df, 48, plan_df, rating_df, 10)
+print(predictions)
+
+# if __name__ == "__main__":
+#     plan_df = pd.read_csv('path_id.csv')
+#     already_rated, predictions = recommend_plan(preds_df, 48, plan_df, rating_df, 10)
+#     print(predictions)
+

@@ -1,0 +1,9 @@
+gensim==3.8.3
+ipython==8.4.0
+matplotlib==3.5.2
+numpy==1.23.1
+pandas==1.4.3
+scikit_learn==1.1.2
+SQLAlchemy==1.4.39
+tensorflow==2.9.1
+tensorflow_recommenders==0.7.0
