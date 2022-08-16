@@ -2,15 +2,18 @@ import pandas as pd
 import pickle
 import numpy as np
 
+
 df_likes = pd.read_csv(r'rec\user_challenges_likes_v2.csv')
 users = df_likes['user_id'].unique()
 challenges = df_likes['challenge_id'].unique()
 user_dict = {}
 
+
 def filtering(df, filter_cols,filter_conditions):
     for col, condition in zip(filter_cols, filter_conditions):
         df = df[df[col]==condition]
     return df
+
 
 for user in users:
     liked_challenges = set(filtering(df_likes,['user_id','score'],[user,1])['challenge_id'])
@@ -19,12 +22,14 @@ for user in users:
 
 challenge_dict={}
 
+
 for challenge in challenges:
     user_liked = set(filtering(df_likes,['challenge_id','score'],[challenge,1])['user_id'])
     user_unliked = set(filtering(df_likes,['challenge_id','score'],[challenge,0])['user_id'])
     challenge_dict[challenge]=(user_liked,user_unliked)
 #get the top 10 most liked challenges
 most_liked = sorted(challenge_dict, key=lambda item: len(challenge_dict[item][0]), reverse=True)[:10]
+
 
 def similairty_index(user1,user2):
     all_sets = [user_dict[user1][0],user_dict[user1][1] ,user_dict[user2][0], user_dict[user2][1]]
@@ -34,6 +39,7 @@ def similairty_index(user1,user2):
         len(user_dict[user1][0].intersection(user_dict[user2][1]))
     union = len(set().union(*all_sets))
     return float(like_like_intersection+unlike_unlike_intersection-like_unlike_intersection) / union
+
 
 def user_like_predict(user_id, challenge_id):
     user_liked = set(filtering(df_likes,['challenge_id','score'],[challenge_id,1])['user_id'])
@@ -48,6 +54,7 @@ def user_like_predict(user_id, challenge_id):
     if num_user_rated == 0:
         return 0.1
     return float(sum_similarity_user_liked-sum_similarity_user_unliked) / num_user_rated
+
 
 def ranking(user_id):
     df = pd.read_csv(r'rec\user_challenges_likes_v2.csv')
@@ -82,4 +89,7 @@ def rank_all():
 def recommend(user):
     ranking = load_pickle(r'rec\saved_ranking.p')
     return np.random.choice(ranking[user][:10], 1)
+
+
 print(ranking(3))
+
