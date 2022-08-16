@@ -20,6 +20,7 @@ for user in users:
     unliked_challenges = set(filtering(df_likes,['user_id','score'],[user,0])['challenge_id'])
     user_dict[user]=(liked_challenges,unliked_challenges)
 
+
 challenge_dict={}
 
 
@@ -69,13 +70,16 @@ def load_json(path):
     with open(path, 'r') as fp:
         return pickle.load(fp)
 
+
 def save_pickle(data):
     with open(r'rec\saved_ranking.p', 'wb') as fp:
         pickle.dump(data, fp, protocol=pickle.HIGHEST_PROTOCOL)
 
+
 def load_pickle(path):
     with open(path, 'rb') as fp:
         return pickle.load(fp)  
+
 
 def rank_all():
     df = pd.read_csv(r'rec\user_challenges_likes_v2.csv')
@@ -85,6 +89,7 @@ def rank_all():
         df_ranking[user] = ranking(user)
     # save_json(df_ranking)
     save_pickle(df_ranking)
+
 
 def recommend(user):
     ranking = load_pickle(r'rec\saved_ranking.p')
