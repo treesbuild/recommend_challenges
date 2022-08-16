@@ -3,7 +3,8 @@ import pickle
 import numpy as np
 
 
-df_likes = pd.read_csv(r'rec\user_challenges_likes_v2.csv')
+df_likes = pd.read_csv(r'ml_new\rec\user_challenges_likes_v2.csv')
+df_likes['score'] = np.where(np.logical_and(df_likes['likes']==1, df_likes['done']==1), 1,0)
 users = df_likes['user_id'].unique()
 challenges = df_likes['challenge_id'].unique()
 user_dict = {}
@@ -31,7 +32,6 @@ for challenge in challenges:
 #get the top 10 most liked challenges
 most_liked = sorted(challenge_dict, key=lambda item: len(challenge_dict[item][0]), reverse=True)[:10]
 
-
 def similairty_index(user1,user2):
     all_sets = [user_dict[user1][0],user_dict[user1][1] ,user_dict[user2][0], user_dict[user2][1]]
     like_like_intersection = len(user_dict[user1][0].intersection(user_dict[user2][0]))
@@ -58,21 +58,14 @@ def user_like_predict(user_id, challenge_id):
 
 
 def ranking(user_id):
-    df = pd.read_csv(r'rec\user_challenges_likes_v2.csv')
+    df = pd.read_csv(r'ml_new\rec\user_challenges_likes_v2.csv')
     challenges = df['challenge_id'].unique()
-    users = df['user_id'].unique()
-    if user_id not in users:
-        return sorted(challenge_dict, key=lambda item: len(challenge_dict[item][0]), reverse=True)[:10]
-    return sorted([(challenge, user_like_predict(user_id, challenge)) for challenge in challenges], key=lambda challenge: challenge[0], reverse=False)
+    rankings = [(challenge, user_like_predict(user_id, challenge)) for challenge in challenges]
+    return sorted(rankings, key=lambda tup: tup[1], reverse=True)
 
 
-def load_json(path):
-    with open(path, 'r') as fp:
-        return pickle.load(fp)
-
-
-def save_pickle(data):
-    with open(r'rec\saved_ranking.p', 'wb') as fp:
+def save_pickle(data, path):
+    with open(path, 'wb') as fp:
         pickle.dump(data, fp, protocol=pickle.HIGHEST_PROTOCOL)
 
 
@@ -82,19 +75,27 @@ def load_pickle(path):
 
 
 def rank_all():
-    df = pd.read_csv(r'rec\user_challenges_likes_v2.csv')
+    df = pd.read_csv(r'ml_new\rec\user_challenges_likes_v2.csv')
     users = df['user_id'].unique()
-    df_ranking = dict()
-    for user in users:
-        df_ranking[user] = ranking(user)
-    # save_json(df_ranking)
-    save_pickle(df_ranking)
+    df_ranking = {user: ranking(user) for user in users}
+    most_liked = sorted(challenge_dict, key=lambda item: len(challenge_dict[item][0]), reverse=True)[:10]
+    df_ranking['new_user'] = most_liked
+    save_pickle(df_ranking, r'ml_new\rec\saved_ranking.p')
 
 
 def recommend(user):
-    ranking = load_pickle(r'rec\saved_ranking.p')
-    return np.random.choice(ranking[user][:10], 1)
+    df = pd.read_csv(r'ml_new\rec\user_challenges_likes_v2.csv')
+    users = df['user_id'].unique()
+    ranking = load_pickle(r'ml_new\rec\saved_ranking.p')
+    if user not in users:
+        return ranking['new_user']
+    return np.random.choice([x[0] for x in ranking[user]][:10],1)
 
 
-print(ranking(3))
+# def testing():
+#     df_likes
+#     return
+
+
+print(ranking(1))
 
