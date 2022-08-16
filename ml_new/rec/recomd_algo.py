@@ -96,6 +96,6 @@ def recommend(user):
 #     df_likes
 #     return
 
-
-print(ranking(1))
+# rank_all()
+# print(recommend(1))
 
