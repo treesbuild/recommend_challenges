@@ -11,10 +11,10 @@ cat=''
 with open(r'ml_new\rec\daily_challenges_category.txt','r', encoding='utf-8') as f:
     for count, i in enumerate(f):
         if re.search(r'^After.+',i):
-            df_challenges.loc[count] = [count,i.strip(),cat]
+            df_challenges.loc[count] = [count,i.strip(),cat.strip()]
         else:
             cat = i
-
+df_challenges.to_csv(r'ml_new\rec\challenges_data.csv',header=['challenge_id','challenge', 'category'], index=False)
 df = pd.DataFrame(index=range(200),columns=range(3))
 df[0] = np.random.randint(5,size=(200,))
 df[1] = np.random.choice(df_challenges.challenge_id,(200,))
