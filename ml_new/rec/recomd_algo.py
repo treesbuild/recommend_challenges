@@ -2,10 +2,10 @@ from unicodedata import category
 import pandas as pd
 import pickle
 import numpy as np
-
+challenge_likes_path = r'ml_new\rec\user_challenges_likes_v2.csv'
 cat = pd.read_csv(r'ml_new\rec\challenges_data.csv')
 cat_list = cat['category'].unique()
-df_likes = pd.read_csv(r'ml_new\rec\user_challenges_likes_v2.csv')
+df_likes = pd.read_csv(challenge_likes_path)
 df_likes['score'] = np.where(np.logical_and(df_likes['likes']==1, df_likes['done']==1), 1,0)
 users = df_likes['user_id'].unique()
 challenges = df_likes['challenge_id'].unique()
@@ -60,7 +60,7 @@ def user_like_predict(user_id, challenge_id):
 
 
 def ranking(user_id):
-    df = pd.read_csv(r'ml_new\rec\user_challenges_likes_v2.csv')
+    df = pd.read_csv(challenge_likes_path)
     challenges = df['challenge_id'].unique()
     rankings = [(challenge, user_like_predict(user_id, challenge), cat[cat['challenge_id'] == challenge]['category'].values) for challenge in challenges]
     return sorted(rankings, key=lambda tup: tup[1], reverse=True)
@@ -77,7 +77,7 @@ def load_pickle(path):
 
 
 def rank_all():
-    df = pd.read_csv(r'ml_new\rec\user_challenges_likes_v2.csv')
+    df = pd.read_csv(challenge_likes_path)
     users = df['user_id'].unique()
     df_ranking = {user: ranking(user) for user in users}
     most_liked = sorted(challenge_dict, key=lambda item: len(challenge_dict[item][0]), reverse=True)
@@ -86,7 +86,7 @@ def rank_all():
 
 
 def recommend(user):
-    df = pd.read_csv(r'ml_new\rec\user_challenges_likes_v2.csv')
+    df = pd.read_csv(challenge_likes_path)
     users = df['user_id'].unique()
     ranking = load_pickle(r'ml_new\rec\saved_ranking_w_cat.p')
     ans = []
@@ -103,5 +103,5 @@ def recommend(user):
 #     df_likes
 #     return
 
-# rank_all()
-print(*recommend(30), sep='\n')
+rank_all()
+print(*recommend(2), sep='\n')
