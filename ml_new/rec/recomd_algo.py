@@ -91,10 +91,7 @@ def recommend(user):
     ranking = load_pickle(r'ml_new\rec\saved_ranking_w_cat.p')
     ans = []
     cat_added = set()
-    if user not in users:
-        rank = ranking['new_user']
-    else:
-        rank = ranking[user]
+    rank = ranking['new_user'] if user not in users else ranking[user]
     for score in rank:
         if score[2][0] not in cat_added:
             ans.append(score)
