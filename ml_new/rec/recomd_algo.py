@@ -3,7 +3,8 @@ import pandas as pd
 import pickle
 import numpy as np
 challenge_likes_path = r'ml_new\rec\user_challenges_likes_v2.csv'
-cat = pd.read_csv(r'ml_new\rec\challenges_data.csv')
+challenge_data_path = r'ml_new\rec\challenges_data.csv'
+cat = pd.read_csv(challenge_data_path)
 cat_list = cat['category'].unique()
 df_likes = pd.read_csv(challenge_likes_path)
 df_likes['score'] = np.where(np.logical_and(df_likes['likes']==1, df_likes['done']==1), 1,0)
@@ -55,12 +56,12 @@ def user_like_predict(user_id, challenge_id):
         sum_similarity_user_unliked += similairty_index(user_id,user)
     num_user_rated = len(user_liked)+len(user_unliked)
     if num_user_rated == 0:
-        return 0.1
+        return 0.5
     return float(sum_similarity_user_liked-sum_similarity_user_unliked) / num_user_rated
 
 
 def ranking(user_id):
-    df = pd.read_csv(challenge_likes_path)
+    df = pd.read_csv(challenge_data_path)
     challenges = df['challenge_id'].unique()
     rankings = [(challenge, user_like_predict(user_id, challenge), cat[cat['challenge_id'] == challenge]['category'].values) for challenge in challenges]
     return sorted(rankings, key=lambda tup: tup[1], reverse=True)
@@ -93,7 +94,7 @@ def recommend(user):
     cat_added = set()
     rank = ranking['new_user'] if user not in users else ranking[user]
     for score in rank:
-        if score[2][0] not in cat_added:
+        if score[1] not in cat_added:
             ans.append(score)
             cat_added.add(score[2][0])
     return ans
@@ -104,4 +105,4 @@ def recommend(user):
 #     return
 
 rank_all()
-print(*recommend(2), sep='\n')
+print(*ranking(2), sep='\n')
