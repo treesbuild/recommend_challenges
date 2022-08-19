@@ -1,7 +1,9 @@
-from unicodedata import category
+import imp
 import pandas as pd
 import pickle
+import random
 import numpy as np
+from collections import defaultdict
 challenge_likes_path = r'ml_new\rec\user_challenges_likes_v2.csv'
 challenge_data_path = r'ml_new\rec\challenges_data.csv'
 cat = pd.read_csv(challenge_data_path)
@@ -35,29 +37,34 @@ for challenge in challenges:
 #get the top 10 most liked challenges
 most_liked = sorted(challenge_dict, key=lambda item: len(challenge_dict[item][0]), reverse=True)[:10]
 
-def similairty_index(user1,user2):
-    all_sets = [user_dict[user1][0],user_dict[user1][1] ,user_dict[user2][0], user_dict[user2][1]]
-    like_like_intersection = len(user_dict[user1][0].intersection(user_dict[user2][0]))
-    unlike_unlike_intersection = len(user_dict[user1][1].intersection(user_dict[user2][1]))
-    like_unlike_intersection = len(user_dict[user1][1].intersection(user_dict[user2][0])) + \
-        len(user_dict[user1][0].intersection(user_dict[user2][1]))
-    union = len(set().union(*all_sets))
-    return float(like_like_intersection+unlike_unlike_intersection-like_unlike_intersection) / union
+def similairty_index(user1, user2):
+    all_sets = [user_dict[user1][0], user_dict[user1][1], user_dict[user2][0], user_dict[user2][1]]
 
+    like_like_intersection = len(user_dict[user1][0].intersection(user_dict[user2][0]))
+
+    unlike_unlike_intersection = len(user_dict[user1][1].intersection(user_dict[user2][1]))
+
+    like_unlike_intersection = len(user_dict[user1][1].intersection(user_dict[user2][0])) + len(user_dict[user1][0].intersection(user_dict[user2][1]))
+
+    union = len(set().union(*all_sets))
+
+    return float(like_like_intersection + unlike_unlike_intersection - like_unlike_intersection) / union
 
 def user_like_predict(user_id, challenge_id):
-    user_liked = set(filtering(df_likes,['challenge_id','score'],[challenge_id,1])['user_id'])
-    user_unliked = set(filtering(df_likes,['challenge_id','score'],[challenge_id,0])['user_id'])
+    user_liked = set(filtering(df_likes, ['challenge_id', 'score'], [challenge_id, 1])['user_id'])
+
+    user_unliked = set(filtering(df_likes, ['challenge_id', 'score'], [challenge_id, 0])['user_id'])
+
     sum_similarity_user_liked = 0.0
     sum_similarity_user_unliked = 0.0
     for user in user_liked:
-        sum_similarity_user_liked += similairty_index(user_id,user)
+        sum_similarity_user_liked += similairty_index(user_id, user)
     for user in user_unliked:
-        sum_similarity_user_unliked += similairty_index(user_id,user)
-    num_user_rated = len(user_liked)+len(user_unliked)
+        sum_similarity_user_unliked += similairty_index(user_id, user)
+    num_user_rated = len(user_liked) + len(user_unliked)
     if num_user_rated == 0:
         return 0.5
-    return float(sum_similarity_user_liked-sum_similarity_user_unliked) / num_user_rated
+    return float(sum_similarity_user_liked - sum_similarity_user_unliked) / num_user_rated
 
 
 def ranking(user_id):
@@ -90,19 +97,21 @@ def recommend(user):
     df = pd.read_csv(challenge_likes_path)
     users = df['user_id'].unique()
     ranking = load_pickle(r'ml_new\rec\saved_ranking_w_cat.p')
-    ans = []
-    cat_added = set()
+    res = defaultdict(list)
     rank = ranking['new_user'] if user not in users else ranking[user]
     for score in rank:
-        if score[1] not in cat_added:
-            ans.append(score)
-            cat_added.add(score[2][0])
-    return ans
+        if len(res[score[2][0]]) > 0:
+            if score[1] > 0.0:
+                res[score[2][0]].append(score)
+        else:
+            res[score[2][0]].append(score)
+    print(res)
+    return [random.choice(value) for key, value in res.items()]
 
 
 # def testing():
 #     df_likes
 #     return
 
-rank_all()
-print(*ranking(2), sep='\n')
+# rank_all()
+print(*recommend(2), sep='\n')
