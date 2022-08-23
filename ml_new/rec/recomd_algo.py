@@ -1,10 +1,9 @@
-import imp
 import pandas as pd
 import pickle
 import random
 import numpy as np
 from collections import defaultdict
-challenge_likes_path = r'ml_new\rec\user_challenges_likes_v2.csv'
+challenge_likes_path = r'ml_new\rec\user_challenges_likes_testing.csv'
 challenge_data_path = r'ml_new\rec\challenges_data.csv'
 cat = pd.read_csv(challenge_data_path)
 cat_list = cat['category'].unique()
@@ -105,7 +104,6 @@ def recommend(user):
                 res[score[2][0]].append(score)
         else:
             res[score[2][0]].append(score)
-    print(res)
     return [random.choice(value) for key, value in res.items()]
 
 
@@ -113,5 +111,5 @@ def recommend(user):
 #     df_likes
 #     return
 
-# rank_all()
-print(*recommend(2), sep='\n')
+rank_all()
+print(*ranking(2), sep='\n')
