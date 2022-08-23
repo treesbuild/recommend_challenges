@@ -3,12 +3,12 @@ import pickle
 import random
 import numpy as np
 from collections import defaultdict
-challenge_likes_path = r'ml_new\rec\user_challenges_likes_testing.csv'
+challenge_likes_path = r'ml_new\rec\user_challenges_likes_v2.csv'
 challenge_data_path = r'ml_new\rec\challenges_data.csv'
 cat = pd.read_csv(challenge_data_path)
 cat_list = cat['category'].unique()
 df_likes = pd.read_csv(challenge_likes_path)
-df_likes['score'] = np.where(np.logical_and(df_likes['likes']==1, df_likes['done']==1), 1,0)
+df_likes['score'] = np.where(df_likes['likes']==1, 1,0)
 users = df_likes['user_id'].unique()
 challenges = df_likes['challenge_id'].unique()
 user_dict = {}
@@ -34,7 +34,9 @@ for challenge in challenges:
     user_unliked = set(filtering(df_likes,['challenge_id','score'],[challenge,0])['user_id'])
     challenge_dict[challenge]=(user_liked,user_unliked)
 #get the top 10 most liked challenges
-most_liked = sorted(challenge_dict, key=lambda item: len(challenge_dict[item][0]), reverse=True)[:10]
+# most_liked = sorted(challenge_dict, key=lambda item: len(challenge_dict[item][0]), reverse=True)[:10]
+user_most_inter = sorted([i for i in df_likes['user_id'].unique()], key=lambda x: filtering(df_likes, ['user_id'],[x]).shape[0], reverse=True)[:int(len(users)*0.15) if len(users) > 50 else int(len(users)*0.5)]
+print(user_most_inter)
 
 def similairty_index(user1, user2):
     all_sets = [user_dict[user1][0], user_dict[user1][1], user_dict[user2][0], user_dict[user2][1]]
@@ -62,7 +64,7 @@ def user_like_predict(user_id, challenge_id):
         sum_similarity_user_unliked += similairty_index(user_id, user)
     num_user_rated = len(user_liked) + len(user_unliked)
     if num_user_rated == 0:
-        return 0.5
+         return 0.5 if user_id in user_most_inter else -1
     return float(sum_similarity_user_liked - sum_similarity_user_unliked) / num_user_rated
 
 
@@ -112,4 +114,6 @@ def recommend(user):
 #     return
 
 rank_all()
-print(*ranking(2), sep='\n')
+print(*recommend(3), sep='\n')
+# use knn to process the questionnaire of the user to determine which users are similar to 
+# him/her and then recommend challgenges base on that. 
