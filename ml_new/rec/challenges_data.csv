@@ -1,149 +1,149 @@
 challenge_id,challenge,category
-1,"After I [your anchor], I will Floss one tooth",Health Routines
-2,"After I [your anchor], I will Open my vitamin container",Health Routines
-3,"After I [your anchor], I will Put on one drop of sunscreen",Health Routines
-4,"After I [your anchor], I will Put in my retainer",Health Routines
-5,"After I [your anchor], I will Set out my vitamins",Health Routines
-6,"After I [your anchor], I will Put on my fitness tracker",Health Routines
-7,"After I [your anchor], I will Turn off my Internet router at night",Health Routines
-8,"After I [your anchor], I will Cut our sugar for the day",Health Routines
-9,"After I [your anchor], I will Instead of soda, drink water",Health Routines
-10,"After I [your anchor], I will Wear sunscreen",Health Routines
-11,"After I [your anchor], I will Stop eating till you're full",Health Routines
-13,"After I [your anchor], I will Do two pushups",Physical activity
-14,"After I [your anchor], I will Put on my walking shoes",Physical activity
-15,"After I [your anchor], I will Do 3 crunches",Physical activity
-16,"After I [your anchor], I will Give someone a hug",Physical activity
-17,"After I [your anchor], I will Declutter for 5 minutes",Physical activity
-18,"After I [your anchor], I will Smile at the first stranger you see",Physical activity
-19,"After I [your anchor], I will Give someone a compliment",Physical activity
-20,"After I [your anchor], I will Drink a glass of water",Physical activity
-21,"After I [your anchor], I will Wear a piece of clothing that you haven’t for a while",Physical activity
-22,"After I [your anchor], I will Create a list of things to do today",Physical activity
-23,"After I [your anchor], I will Say thank you to someone",Physical activity
-24,"After I [your anchor], I will Only have one cup of coffee/limit your caffeine intake",Physical activity
-25,"After I [your anchor], I will Stretch",Physical activity
-26,"After I [your anchor], I will Breathe deeply 5 times",Physical activity
-27,"After I [your anchor], I will Take a walk",Physical activity
-28,"After I [your anchor], I will Invest $5",Physical activity
-29,"After I [your anchor], I will Download a new song",Physical activity
-30,"After I [your anchor], I will Try a new yoga pose",Physical activity
-31,"After I [your anchor], I will Spend 5 minutes looking at the sky",Physical activity
-32,"After I [your anchor], I will Draw 3 random shapes or scribbles on a blank page - then try and make it into a coherent picture of something",Physical activity
-33,"After I [your anchor], I will Get some sun",Physical activity
-34,"After I [your anchor], I will Laugh",Physical activity
-35,"After I [your anchor], I will Practice an act of kindness",Physical activity
-36,"After I [your anchor], I will Stand up straight",Physical activity
-37,"After I [your anchor], I will Practice good posture",Physical activity
-38,"After I [your anchor], I will Refuse to fidget",Physical activity
-39,"After I [your anchor], I will Take a quick cold shower",Physical activity
-40,"After I [your anchor], I will Avoid your phone",Physical activity
-41,"After I [your anchor], I will Help someone around you",Physical activity
-42,"After I [your anchor], I will Use a reusable water bottle",Physical activity
-43,"After I [your anchor], I will Stretch and touch your toes",Physical activity
-44,"After I [your anchor], I will Stop taking photos of everything",Physical activity
-45,"After I [your anchor], I will Do a chore",Physical activity
-46,"After I [your anchor], I will Dance for 5 minutes",Physical activity
-47,"After I [your anchor], I will Unplug for an hour",Physical activity
-48,"After I [your anchor], I will Discover a new place on campus",Physical activity
-49,"After I [your anchor], I will Try a new food",Physical activity
-50,"After I [your anchor], I will Try not spending money for today",Physical activity
-51,"After I [your anchor], I will Change a password",Physical activity
-52,"After I [your anchor], I will Spend 5 minutes quietly",Physical activity
-53,"After I [your anchor], I will Do child's pose/ cat cow/ downward dog",Physical activity
-55,"After I [your anchor], I will Drink a sip of water",Nutrition
-56,"After I [your anchor], I will Take a bite of a carrot",Nutrition
-57,"After I [your anchor], I will Fill a glass of water",Nutrition
-58,"After I [your anchor], I will Throw out one bad food item in my house",Nutrition
-59,"After I [your anchor], I will Write down *one* thing I ate",Nutrition
-60,"After I [your anchor], I will Put an apple in my bag",Nutrition
-61,"After I [your anchor], I will Write down one veggie I like to eat",Nutrition
-62,"After I [your anchor], I will Eat a piece of fruit",Nutrition
-63,"After I [your anchor], I will Plan a healthy dinner",Nutrition
-64,"After I [your anchor], I will Drink tea",Nutrition
-65,"After I [your anchor], I will Eat a healthy snack",Nutrition
-67,"After I [your anchor], I will Stretch one part of my body briefly",Calming \ de-stressing
-68,"After I [your anchor], I will Exhale and relax for 2 seconds",Calming \ de-stressing
-69,"After I [your anchor], I will Do a quick sketch",Calming \ de-stressing
-70,"After I [your anchor], I will Yawn to relax my jaw",Calming \ de-stressing
-71,"After I [your anchor], I will Stretch my back",Calming \ de-stressing
-72,"After I [your anchor], I will Turn off the ringer on my phone",Calming \ de-stressing
-73,"After I [your anchor], I will Listen to your favorite song",Calming \ de-stressing
-74,"After I [your anchor], I will Plan something fun for the weekend",Calming \ de-stressing
-75,"After I [your anchor], I will Let go of a grudge",Calming \ de-stressing
-76,"After I [your anchor], I will Try something new in your self-care routine",Calming \ de-stressing
-77,"After I [your anchor], I will Change your phone screensaver to something that makes you smile",Calming \ de-stressing
-78,"After I [your anchor], I will Detach from the source of your stress",Calming \ de-stressing
-79,"After I [your anchor], I will Take your time",Calming \ de-stressing
-80,"After I [your anchor], I will Take a break",Calming \ de-stressing
-81,"After I [your anchor], I will Forgive yourself",Calming \ de-stressing
-82,"After I [your anchor], I will Look on the bright side",Calming \ de-stressing
-83,"After I [your anchor], I will Ask for help with something you are struggling with",Calming \ de-stressing
-85,"After I [your anchor], I will Play 3 chords on the guitar",Learning & hobbies
-86,"After I [your anchor], I will Read one sentence in a book",Learning & hobbies
-87,"After I [your anchor], I will Sing a scale",Learning & hobbies
-88,"After I [your anchor], I will Recite one line of poetry",Learning & hobbies
-89,"After I [your anchor], I will Open my workbook",Learning & hobbies
-90,"After I [your anchor], I will Spend 5 minutes reflecting",Learning & hobbies
-91,"After I [your anchor], I will Acknowledge challenges of the day",Learning & hobbies
-92,"After I [your anchor], I will Identify a goal",Learning & hobbies
-93,"After I [your anchor], I will Read for 5 minutes",Learning & hobbies
-94,"After I [your anchor], I will Watch a TED talk",Learning & hobbies
-95,"After I [your anchor], I will Learn the word of the day (https://www.merriam-webster.com/word-of-the-day)",Learning & hobbies
-96,"After I [your anchor], I will Read the news",Learning & hobbies
-97,"After I [your anchor], I will Break that bad habit",Learning & hobbies
-98,"After I [your anchor], I will Listen to a podcast",Learning & hobbies
-99,"After I [your anchor], I will Read an inspirational quote",Learning & hobbies
-101,"After I [your anchor], I will Kiss my spouse",Relationships
-102,"After I [your anchor], I will Think of one special person to call/text today",Relationships
-103,"After I [your anchor], I will Text my mom",Relationships
-104,"After I [your anchor], I will Get out my set of “thank you” notes",Relationships
-105,"After I [your anchor], I will Give my spouse a hug",Relationships
-106,"After I [your anchor], I will Send a text to a friend",Relationships
-107,"After I [your anchor], I will Tell someone you love them",Relationships
-108,"After I [your anchor], I will Genuinely listen to people's response after asking them ‘ how they are doing’",Relationships
-109,"After I [your anchor], I will Make eye contact with someone new",Relationships
-110,"After I [your anchor], I will Really be present in a conversation",Relationships
-111,"After I [your anchor], I will Figure out your love language",Relationships
-112,"After I [your anchor], I will Talk to your professor",Relationships
-113,"After I [your anchor], I will Call a family member",Relationships
-115,"After I [your anchor], I will Set out my workout clothes",Organizing
-116,"After I [your anchor], I will Think of one top priority for my day",Organizing
-117,"After I [your anchor], I will Look at my to-do list",Organizing
-118,"After I [your anchor], I will Plug mobile phone into charger",Organizing
-119,"After I [your anchor], I will Turn on the ringer on my phone",Organizing
-120,"After I [your anchor], I will Plan your week",Organizing
-121,"After I [your anchor], I will Accomplish something early",Organizing
-122,"After I [your anchor], I will Prioritize your most challenging task",Organizing
-124,"After I [your anchor], I will Hang up my coat",Cleaning & tidying
-125,"After I [your anchor], I will Wipe out sink",Cleaning & tidying
-126,"After I [your anchor], I will Tidy one thing in the house",Cleaning & tidying
-127,"After I [your anchor], I will Put dirty laundry in basket",Cleaning & tidying
-128,"After I [your anchor], I will Put my receipts in the basket",Cleaning & tidying
-129,"After I [your anchor], I will Wipe my bathroom mirror",Cleaning & tidying
-130,"After I [your anchor], I will Turn off lights in study",Cleaning & tidying
-131,"After I [your anchor], I will Clean one dish",Cleaning & tidying
-132,"After I [your anchor], I will Clear one item off my desk",Cleaning & tidying
-133,"After I [your anchor], I will Pull cover up on bed",Cleaning & tidying
-134,"After I [your anchor], I will Spend 5 minutes cleaning out your email",Cleaning & tidying
-135,"After I [your anchor], I will Make your bed",Cleaning & tidying
-137,"After I [your anchor], I will Write three words in my journal",Writing
-138,"After I [your anchor], I will Launch Microsoft Word",Writing
-139,"After I [your anchor], I will Jot down one thing to write about",Writing
-140,"After I [your anchor], I will Write one sentence",Writing
-142,"After I [your anchor], I will Look up at the stars",Mindfulness & gratitude
-143,"After I [your anchor], I will Smile immediately",Mindfulness & gratitude
-144,"After I [your anchor], I will Think of one thing I’m grateful for",Mindfulness & gratitude
-145,"After I [your anchor], I will Say one thing I’m thankful for",Mindfulness & gratitude
-146,"After I [your anchor], I will Do one visualization",Mindfulness & gratitude
-147,"After I [your anchor], I will Read one verse of scripture",Mindfulness & gratitude
-148,"After I [your anchor], I will Meditate for 3 breaths",Mindfulness & gratitude
-149,"After I [your anchor], I will Do one sun salutation",Mindfulness & gratitude
-150,"After I [your anchor], I will Write down one positive word",Mindfulness & gratitude
-151,"After I [your anchor], I will Smile at yourself in the mirror",Mindfulness & gratitude
-152,"After I [your anchor], I will Donate something that you haven’t used in a long time",Mindfulness & gratitude
-153,"After I [your anchor], I will Acknowledge how you are feeling today",Mindfulness & gratitude
-154,"After I [your anchor], I will Speak daily affirmations",Mindfulness & gratitude
-155,"After I [your anchor], I will List 3 things you like about yourself",Mindfulness & gratitude
-156,"After I [your anchor], I will Be honest with yourself",Mindfulness & gratitude
-157,"After I [your anchor], I will Take a personality quiz",Mindfulness & gratitude
+1,"After I [your anchor], I will Floss one tooth (BJ’s #1 suggestion)",Health
+2,"After I [your anchor], I will Open my vitamin container",Health
+3,"After I [your anchor], I will Put on one drop of sunscreen",Health
+4,"After I [your anchor], I will Put in my retainer",Health
+5,"After I [your anchor], I will Set out my vitamins",Health
+6,"After I [your anchor], I will Put on my fitness tracker",Health
+7,"After I [your anchor], I will Cut our sugar for the day",Health
+8,"After I [your anchor], I will Instead of soda, drink water",Health
+9,"After I [your anchor], I will Wear sunscreen",Health
+10,"After I [your anchor], I will Stop eating till you're full",Health
+11,"After I [your anchor], I will Do two pushups",Health
+12,"After I [your anchor], I will Put on my walking shoes",Health
+13,"After I [your anchor], I will Do 3 crunches",Health
+14,"After I [your anchor], I will Drink a glass of water",Health
+15,"After I [your anchor], I will Only have one cup of coffee/limit your caffeine intake",Health
+16,"After I [your anchor], I will Stretch",Health
+17,"After I [your anchor], I will Take a walk",Health
+18,"After I [your anchor], I will Drink a sip of water",Health
+19,"After I [your anchor], I will Take a bite of a carrot",Health
+20,"After I [your anchor], I will Fill a glass of water",Health
+21,"After I [your anchor], I will Throw out one bad food item in my house",Health
+22,"After I [your anchor], I will Write down *one* thing I ate",Health
+23,"After I [your anchor], I will Put an apple in my bag",Health
+24,"After I [your anchor], I will Write down one veggie I like to eat",Health
+25,"After I [your anchor], I will Eat a piece of fruit",Health
+26,"After I [your anchor], I will Plan a healthy dinner",Health
+27,"After I [your anchor], I will Drink tea",Health
+28,"After I [your anchor], I will Eat a healthy snack",Health
+29,"After I [your anchor], I will Stretch one part of my body briefly",Health
+30,"After I [your anchor], I will Do a quick sketch",Health
+31,"After I [your anchor], I will Stretch my back",Health
+32,"After I [your anchor], I will Set out my workout clothes",Health
+34,"After I [your anchor], I will Turn off my Internet router at night",Personal
+35,"After I [your anchor], I will Declutter for 5 minutes",Personal
+36,"After I [your anchor], I will Wear a piece of clothing that you haven’t for a while",Personal
+37,"After I [your anchor], I will Create a list of things to do today",Personal
+38,"After I [your anchor], I will Write three words in my journal",Personal
+39,"After I [your anchor], I will Launch Microsoft Word",Personal
+40,"After I [your anchor], I will Jot down one thing to write about",Personal
+41,"After I [your anchor], I will Write one sentence",Personal
+42,"After I [your anchor], I will Breathe deeply 5 times",Personal
+43,"After I [your anchor], I will Download a new song",Personal
+44,"After I [your anchor], I will Try a new yoga pose",Personal
+45,"After I [your anchor], I will Spend 5 minutes looking at the sky",Personal
+46,"After I [your anchor], I will Draw 3 random shapes or scribbles on a blank page - then try and make it into a coherent picture of something",Personal
+47,"After I [your anchor], I will Get some sun",Personal
+48,"After I [your anchor], I will Laugh",Personal
+49,"After I [your anchor], I will Stand up straight",Personal
+50,"After I [your anchor], I will Practice good posture",Personal
+51,"After I [your anchor], I will Refuse to fidget",Personal
+52,"After I [your anchor], I will Take a quick cold shower",Personal
+53,"After I [your anchor], I will Avoid your phone",Personal
+54,"After I [your anchor], I will Use a reusable water bottle",Personal
+55,"After I [your anchor], I will Stretch and touch your toes",Personal
+56,"After I [your anchor], I will Stop taking photos of everything",Personal
+57,"After I [your anchor], I will Do a chore",Personal
+58,"After I [your anchor], I will Dance for 5 minutes",Personal
+59,"After I [your anchor], I will Unplug for an hour",Personal
+60,"After I [your anchor], I will Try a new food",Personal
+61,"After I [your anchor], I will Change a password",Personal
+62,"After I [your anchor], I will Spend 5 minutes quietly",Personal
+63,"After I [your anchor], I will Do child's pose/ cat cow/ downward dog",Personal
+64,"After I [your anchor], I will Exhale and relax for 2 seconds",Personal
+65,"After I [your anchor], I will Yawn to relax my jaw",Personal
+66,"After I [your anchor], I will Listen to your favorite song",Personal
+67,"After I [your anchor], I will Try something new in your self-care routine",Personal
+68,"After I [your anchor], I will Change your phone screensaver to something that makes you smile",Personal
+69,"After I [your anchor], I will Detach from the source of your stress",Personal
+70,"After I [your anchor], I will Take your time",Personal
+71,"After I [your anchor], I will Take a break",Personal
+72,"After I [your anchor], I will Forgive yourself",Personal
+73,"After I [your anchor], I will Look on the bright side",Personal
+74,"After I [your anchor], I will Play 3 chords on the guitar",Personal
+75,"After I [your anchor], I will Plug mobile phone into charger",Personal
+76,"After I [your anchor], I will Turn on the ringer on my phone",Personal
+77,"After I [your anchor], I will Plan your week",Personal
+78,"After I [your anchor], I will Accomplish something early",Personal
+79,"After I [your anchor], I will Prioritize your most challenging task",Personal
+80,"After I [your anchor], I will Hang up my coat",Personal
+81,"After I [your anchor], I will Wipe out sink",Personal
+82,"After I [your anchor], I will Tidy one thing in the house",Personal
+83,"After I [your anchor], I will Put dirty laundry in basket",Personal
+84,"After I [your anchor], I will Wipe my bathroom mirror",Personal
+85,"After I [your anchor], I will Turn off lights in study",Personal
+86,"After I [your anchor], I will Clean one dish",Personal
+87,"After I [your anchor], I will Clear one item off my desk",Personal
+88,"After I [your anchor], I will Pull cover up on bed",Personal
+89,"After I [your anchor], I will Make your bed",Personal
+90,"After I [your anchor], I will Look up at the stars",Personal
+91,"After I [your anchor], I will Smile immediately",Personal
+92,"After I [your anchor], I will Think of one thing I’m grateful for",Personal
+93,"After I [your anchor], I will Say one thing I’m thankful for",Personal
+94,"After I [your anchor], I will Do one visualization",Personal
+95,"After I [your anchor], I will Read one verse of scripture",Personal
+96,"After I [your anchor], I will Meditate for 3 breaths",Personal
+97,"After I [your anchor], I will Do one sun salutation",Personal
+98,"After I [your anchor], I will Write down one positive word",Personal
+99,"After I [your anchor], I will Smile at yourself in the mirror",Personal
+100,"After I [your anchor], I will Acknowledge how you are feeling today",Personal
+101,"After I [your anchor], I will Speak daily affirmations",Personal
+102,"After I [your anchor], I will List 3 things you like about yourself",Personal
+103,"After I [your anchor], I will Be honest with yourself",Personal
+104,"After I [your anchor], I will Take a personality quiz",Personal
+106,"After I [your anchor], I will Give someone a hug",Social
+107,"After I [your anchor], I will Smile at the first stranger you see",Social
+108,"After I [your anchor], I will Give someone a compliment",Social
+109,"After I [your anchor], I will Say thank you to someone",Social
+110,"After I [your anchor], I will Practice an act of kindness",Social
+111,"After I [your anchor], I will Help someone around you",Social
+112,"After I [your anchor], I will Turn off the ringer on my phone",Social
+113,"After I [your anchor], I will Plan something fun for the weekend",Social
+114,"After I [your anchor], I will Let go of a grudge",Social
+115,"After I [your anchor], I will Kiss my spouse",Social
+116,"After I [your anchor], I will Think of one special person to call/text today",Social
+117,"After I [your anchor], I will Text my mom",Social
+118,"After I [your anchor], I will Get out my set of “thank you” notes",Social
+119,"After I [your anchor], I will Give my spouse a hug",Social
+120,"After I [your anchor], I will Send a text to a friend",Social
+121,"After I [your anchor], I will Tell someone you love them",Social
+122,"After I [your anchor], I will Genuinely listen to people's response after asking them ‘ how they are doing’",Social
+123,"After I [your anchor], I will Make eye contact with someone new",Social
+124,"After I [your anchor], I will Really be present in a conversation",Social
+125,"After I [your anchor], I will Figure out your love language",Social
+126,"After I [your anchor], I will Call a family member",Social
+127,"After I [your anchor], I will Donate something that you haven’t used in a long time",Social
+129,"After I [your anchor], I will Invest $5",Money
+130,"After I [your anchor], I will Try not spending money for today",Money
+131,"After I [your anchor], I will Put my receipts in the basket",Money
+133,"After I [your anchor], I will Discover a new place on campus",School
+134,"After I [your anchor], I will Spend 5 minutes cleaning out your email",School
+135,"After I [your anchor], I will Ask for help with something you are struggling with",School
+136,"After I [your anchor], I will Read one sentence in a book",School
+137,"After I [your anchor], I will Sing a scale",School
+138,"After I [your anchor], I will Recite one line of poetry",School
+139,"After I [your anchor], I will Open my workbook",School
+140,"After I [your anchor], I will Spend 5 minutes reflecting",School
+141,"After I [your anchor], I will Acknowledge challenges of the day",School
+142,"After I [your anchor], I will Identify a goal",School
+143,"After I [your anchor], I will Read for 5 minutes",School
+144,"After I [your anchor], I will Watch a TED talk",School
+145,"After I [your anchor], I will Learn the word of the day (https://www.merriam-webster.com/word-of-the-day)",School
+146,"After I [your anchor], I will Read the news",School
+147,"After I [your anchor], I will Break that bad habit",School
+148,"After I [your anchor], I will Listen to a podcast",School
+149,"After I [your anchor], I will Read an inspirational quote",School
+150,"After I [your anchor], I will Talk to your professor",School
+151,"After I [your anchor], I will Think of one top priority for my day",School
+152,"After I [your anchor], I will Look at my to-do list",School

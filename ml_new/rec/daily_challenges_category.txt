@@ -1,58 +1,21 @@
-Health Routines
+Health
 After I [your anchor], I will Floss one tooth (BJ’s #1 suggestion)
 After I [your anchor], I will Open my vitamin container
 After I [your anchor], I will Put on one drop of sunscreen
 After I [your anchor], I will Put in my retainer
 After I [your anchor], I will Set out my vitamins
 After I [your anchor], I will Put on my fitness tracker
-After I [your anchor], I will Turn off my Internet router at night
 After I [your anchor], I will Cut our sugar for the day
 After I [your anchor], I will Instead of soda, drink water
 After I [your anchor], I will Wear sunscreen
 After I [your anchor], I will Stop eating till you're full
-Physical activity
 After I [your anchor], I will Do two pushups
 After I [your anchor], I will Put on my walking shoes
 After I [your anchor], I will Do 3 crunches
-After I [your anchor], I will Give someone a hug
-After I [your anchor], I will Declutter for 5 minutes
-After I [your anchor], I will Smile at the first stranger you see
-After I [your anchor], I will Give someone a compliment
 After I [your anchor], I will Drink a glass of water
-After I [your anchor], I will Wear a piece of clothing that you haven’t for a while
-After I [your anchor], I will Create a list of things to do today
-After I [your anchor], I will Say thank you to someone
 After I [your anchor], I will Only have one cup of coffee/limit your caffeine intake
 After I [your anchor], I will Stretch
-After I [your anchor], I will Breathe deeply 5 times
 After I [your anchor], I will Take a walk
-After I [your anchor], I will Invest $5 
-After I [your anchor], I will Download a new song
-After I [your anchor], I will Try a new yoga pose
-After I [your anchor], I will Spend 5 minutes looking at the sky
-After I [your anchor], I will Draw 3 random shapes or scribbles on a blank page - then try and make it into a coherent picture of something
-After I [your anchor], I will Get some sun
-After I [your anchor], I will Laugh 
-After I [your anchor], I will Practice an act of kindness
-After I [your anchor], I will Stand up straight
-After I [your anchor], I will Practice good posture
-After I [your anchor], I will Refuse to fidget
-After I [your anchor], I will Take a quick cold shower
-After I [your anchor], I will Avoid your phone
-After I [your anchor], I will Help someone around you
-After I [your anchor], I will Use a reusable water bottle
-After I [your anchor], I will Stretch and touch your toes
-After I [your anchor], I will Stop taking photos of everything
-After I [your anchor], I will Do a chore
-After I [your anchor], I will Dance for 5 minutes
-After I [your anchor], I will Unplug for an hour
-After I [your anchor], I will Discover a new place on campus
-After I [your anchor], I will Try a new food
-After I [your anchor], I will Try not spending money for today
-After I [your anchor], I will Change a password
-After I [your anchor], I will Spend 5 minutes quietly
-After I [your anchor], I will Do child's pose/ cat cow/ downward dog
-Nutrition
 After I [your anchor], I will Drink a sip of water
 After I [your anchor], I will Take a bite of a carrot
 After I [your anchor], I will Fill a glass of water
@@ -64,16 +27,44 @@ After I [your anchor], I will Eat a piece of fruit
 After I [your anchor], I will Plan a healthy dinner
 After I [your anchor], I will Drink tea
 After I [your anchor], I will Eat a healthy snack
-Calming \ de-stressing
 After I [your anchor], I will Stretch one part of my body briefly
-After I [your anchor], I will Exhale and relax for 2 seconds
 After I [your anchor], I will Do a quick sketch
-After I [your anchor], I will Yawn to relax my jaw
 After I [your anchor], I will Stretch my back
-After I [your anchor], I will Turn off the ringer on my phone
+After I [your anchor], I will Set out my workout clothes
+Personal
+After I [your anchor], I will Turn off my Internet router at night
+After I [your anchor], I will Declutter for 5 minutes
+After I [your anchor], I will Wear a piece of clothing that you haven’t for a while
+After I [your anchor], I will Create a list of things to do today
+After I [your anchor], I will Write three words in my journal
+After I [your anchor], I will Launch Microsoft Word
+After I [your anchor], I will Jot down one thing to write about
+After I [your anchor], I will Write one sentence
+After I [your anchor], I will Breathe deeply 5 times
+After I [your anchor], I will Download a new song
+After I [your anchor], I will Try a new yoga pose
+After I [your anchor], I will Spend 5 minutes looking at the sky
+After I [your anchor], I will Draw 3 random shapes or scribbles on a blank page - then try and make it into a coherent picture of something
+After I [your anchor], I will Get some sun
+After I [your anchor], I will Laugh 
+After I [your anchor], I will Stand up straight
+After I [your anchor], I will Practice good posture
+After I [your anchor], I will Refuse to fidget
+After I [your anchor], I will Take a quick cold shower
+After I [your anchor], I will Avoid your phone
+After I [your anchor], I will Use a reusable water bottle
+After I [your anchor], I will Stretch and touch your toes
+After I [your anchor], I will Stop taking photos of everything
+After I [your anchor], I will Do a chore
+After I [your anchor], I will Dance for 5 minutes
+After I [your anchor], I will Unplug for an hour
+After I [your anchor], I will Try a new food
+After I [your anchor], I will Change a password
+After I [your anchor], I will Spend 5 minutes quietly
+After I [your anchor], I will Do child's pose/ cat cow/ downward dog
+After I [your anchor], I will Exhale and relax for 2 seconds
+After I [your anchor], I will Yawn to relax my jaw
 After I [your anchor], I will Listen to your favorite song
-After I [your anchor], I will Plan something fun for the weekend
-After I [your anchor], I will Let go of a grudge
 After I [your anchor], I will Try something new in your self-care routine
 After I [your anchor], I will Change your phone screensaver to something that makes you smile
 After I [your anchor], I will Detach from the source of your stress
@@ -81,9 +72,68 @@ After I [your anchor], I will Take your time
 After I [your anchor], I will Take a break
 After I [your anchor], I will Forgive yourself
 After I [your anchor], I will Look on the bright side
-After I [your anchor], I will Ask for help with something you are struggling with
-Learning & hobbies
 After I [your anchor], I will Play 3 chords on the guitar
+After I [your anchor], I will Plug mobile phone into charger
+After I [your anchor], I will Turn on the ringer on my phone
+After I [your anchor], I will Plan your week
+After I [your anchor], I will Accomplish something early
+After I [your anchor], I will Prioritize your most challenging task
+After I [your anchor], I will Hang up my coat
+After I [your anchor], I will Wipe out sink
+After I [your anchor], I will Tidy one thing in the house
+After I [your anchor], I will Put dirty laundry in basket
+After I [your anchor], I will Wipe my bathroom mirror
+After I [your anchor], I will Turn off lights in study
+After I [your anchor], I will Clean one dish
+After I [your anchor], I will Clear one item off my desk
+After I [your anchor], I will Pull cover up on bed
+After I [your anchor], I will Make your bed
+After I [your anchor], I will Look up at the stars
+After I [your anchor], I will Smile immediately
+After I [your anchor], I will Think of one thing I’m grateful for
+After I [your anchor], I will Say one thing I’m thankful for
+After I [your anchor], I will Do one visualization
+After I [your anchor], I will Read one verse of scripture
+After I [your anchor], I will Meditate for 3 breaths
+After I [your anchor], I will Do one sun salutation
+After I [your anchor], I will Write down one positive word 
+After I [your anchor], I will Smile at yourself in the mirror
+After I [your anchor], I will Acknowledge how you are feeling today
+After I [your anchor], I will Speak daily affirmations
+After I [your anchor], I will List 3 things you like about yourself 
+After I [your anchor], I will Be honest with yourself
+After I [your anchor], I will Take a personality quiz
+Social
+After I [your anchor], I will Give someone a hug
+After I [your anchor], I will Smile at the first stranger you see
+After I [your anchor], I will Give someone a compliment
+After I [your anchor], I will Say thank you to someone
+After I [your anchor], I will Practice an act of kindness
+After I [your anchor], I will Help someone around you
+After I [your anchor], I will Turn off the ringer on my phone
+After I [your anchor], I will Plan something fun for the weekend
+After I [your anchor], I will Let go of a grudge
+After I [your anchor], I will Kiss my spouse
+After I [your anchor], I will Think of one special person to call/text today
+After I [your anchor], I will Text my mom
+After I [your anchor], I will Get out my set of “thank you” notes
+After I [your anchor], I will Give my spouse a hug
+After I [your anchor], I will Send a text to a friend
+After I [your anchor], I will Tell someone you love them
+After I [your anchor], I will Genuinely listen to people's response after asking them ‘ how they are doing’
+After I [your anchor], I will Make eye contact with someone new
+After I [your anchor], I will Really be present in a conversation
+After I [your anchor], I will Figure out your love language
+After I [your anchor], I will Call a family member
+After I [your anchor], I will Donate something that you haven’t used in a long time
+Money
+After I [your anchor], I will Invest $5 
+After I [your anchor], I will Try not spending money for today
+After I [your anchor], I will Put my receipts in the basket
+School
+After I [your anchor], I will Discover a new place on campus
+After I [your anchor], I will Spend 5 minutes cleaning out your email
+After I [your anchor], I will Ask for help with something you are struggling with
 After I [your anchor], I will Read one sentence in a book
 After I [your anchor], I will Sing a scale
 After I [your anchor], I will Recite one line of poetry
@@ -98,61 +148,6 @@ After I [your anchor], I will Read the news
 After I [your anchor], I will Break that bad habit
 After I [your anchor], I will Listen to a podcast
 After I [your anchor], I will Read an inspirational quote
-Relationships
-After I [your anchor], I will Kiss my spouse
-After I [your anchor], I will Think of one special person to call/text today
-After I [your anchor], I will Text my mom
-After I [your anchor], I will Get out my set of “thank you” notes
-After I [your anchor], I will Give my spouse a hug
-After I [your anchor], I will Send a text to a friend
-After I [your anchor], I will Tell someone you love them
-After I [your anchor], I will Genuinely listen to people's response after asking them ‘ how they are doing’
-After I [your anchor], I will Make eye contact with someone new
-After I [your anchor], I will Really be present in a conversation
-After I [your anchor], I will Figure out your love language
 After I [your anchor], I will Talk to your professor
-After I [your anchor], I will Call a family member
-Organizing
-After I [your anchor], I will Set out my workout clothes
 After I [your anchor], I will Think of one top priority for my day
 After I [your anchor], I will Look at my to-do list
-After I [your anchor], I will Plug mobile phone into charger
-After I [your anchor], I will Turn on the ringer on my phone
-After I [your anchor], I will Plan your week
-After I [your anchor], I will Accomplish something early
-After I [your anchor], I will Prioritize your most challenging task
-Cleaning & tidying
-After I [your anchor], I will Hang up my coat
-After I [your anchor], I will Wipe out sink
-After I [your anchor], I will Tidy one thing in the house
-After I [your anchor], I will Put dirty laundry in basket
-After I [your anchor], I will Put my receipts in the basket
-After I [your anchor], I will Wipe my bathroom mirror
-After I [your anchor], I will Turn off lights in study
-After I [your anchor], I will Clean one dish
-After I [your anchor], I will Clear one item off my desk
-After I [your anchor], I will Pull cover up on bed
-After I [your anchor], I will Spend 5 minutes cleaning out your email
-After I [your anchor], I will Make your bed
-Writing
-After I [your anchor], I will Write three words in my journal
-After I [your anchor], I will Launch Microsoft Word
-After I [your anchor], I will Jot down one thing to write about
-After I [your anchor], I will Write one sentence
-Mindfulness & gratitude
-After I [your anchor], I will Look up at the stars
-After I [your anchor], I will Smile immediately
-After I [your anchor], I will Think of one thing I’m grateful for
-After I [your anchor], I will Say one thing I’m thankful for
-After I [your anchor], I will Do one visualization
-After I [your anchor], I will Read one verse of scripture
-After I [your anchor], I will Meditate for 3 breaths
-After I [your anchor], I will Do one sun salutation
-After I [your anchor], I will Write down one positive word 
-After I [your anchor], I will Smile at yourself in the mirror
-After I [your anchor], I will Donate something that you haven’t used in a long time
-After I [your anchor], I will Acknowledge how you are feeling today
-After I [your anchor], I will Speak daily affirmations
-After I [your anchor], I will List 3 things you like about yourself 
-After I [your anchor], I will Be honest with yourself
-After I [your anchor], I will Take a personality quiz
