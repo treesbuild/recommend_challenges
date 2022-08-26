@@ -49,8 +49,10 @@ for challenge in challenges:
 # ORIGINAL CODE: user_most_inter = sorted([i for i in df_likes['user_id'].unique()], key=lambda x: filtering(df_likes, ['user_id'],[x]).shape[0], reverse=True)[:int(len(users)*0.15) if len(users) > 50 else int(len(users)*0.5)]
 # user_most_inter - stores most active users (people who interact with challenges the most)
 user_most_inter = sorted(list(df_likes['user_id'].unique()), key=lambda x: filtering(df_likes, ['user_id'], [x]).shape[0], reverse=True)
-user_most_inter = user_most_inter[: int(len(users) * 0.15) if len(users) > 50 else int(len(users) * 0.5)]
+num_most_inter = int(len(users) * 0.15) if len(users) > 50 else int(len(users) * 0.5)
+user_most_inter = user_most_inter[: num_most_inter]
 print(user_most_inter)
+new_challenge = set()
 
 '''
 Function calculates similarities between two users. 
@@ -104,7 +106,12 @@ def user_like_predict(user_id, challenge_id):
     # if no one has rated challenge, means it is new and return 0.5 as a placeholder score 
     # Only recommend this challenge to most active users
     if num_user_rated == 0:
-         return 0.5 if user_id in user_most_inter else -1
+        new_challenge.add(challenge_id)
+        return 0.5 if user_id in user_most_inter else -1
+    elif challenge_id in new_challenge and num_user_rated < num_most_inter // 2:
+        return float(sum_similarity_user_liked - sum_similarity_user_unliked) / num_user_rated if user_id in user_most_inter else -1
+    if num_user_rated > num_most_inter // 2 and challenge_id in new_challenge:
+        new_challenge.remove(challenge_id)
     # return the calculated prediction by: 
     # (similarity to users who liked challenge - similarity to users who disliked challenge) / total numbers of users who rated challenge
     return float(sum_similarity_user_liked - sum_similarity_user_unliked) / num_user_rated
@@ -136,7 +143,7 @@ Function to load pkl file
 '''
 def load_pickle(path):
     with open(path, 'rb') as fp:
-        return pickle.load(fp)  
+        return pickle.load(fp) 
 
 '''
 Function ranks each user's preference on all challenges by calling the ranking 
@@ -178,7 +185,7 @@ def recommend(user):
 #     return
 
 # Run this function everyday to update user preferences on all challenges
-rank_all()
-print(*recommend(3), sep='\n')
+# rank_all()
+print(*ranking(1), sep='\n')
 # use knn to process the questionnaire of the user to determine which users are similar to 
 # him/her and then recommend challgenges base on that. 
