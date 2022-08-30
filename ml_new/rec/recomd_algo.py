@@ -12,7 +12,8 @@ df_likes = pd.read_csv(challenge_likes_path) # user's likes of a challenge
 df_likes['score'] = np.where(df_likes['likes']==1, 1,0) # determine the score of the challenge based on whether user likes or not
 users = df_likes['user_id'].unique() # get all users
 challenges = df_likes['challenge_id'].unique() # get all challenges
-
+users_dict = {i:0 for i in users}
+challenges_dict = {i:0 for i in challenges}
 
 '''
 Function used to filter our rows based on conditions. For example, can filter
@@ -32,7 +33,7 @@ Fills out data for each users. For each user, want their liked and disliked chal
 the dictionary, has a tuple with two sets: challenges user likes and dislikes
 '''
 user_dict = {} # user dictionary - used to store liked and disliked challenges
-for user in users:
+for user in users_dict:
     liked_challenges = set(filtering(df_likes,['user_id','score'],[user,1])['challenge_id'])
     unliked_challenges = set(filtering(df_likes,['user_id','score'],[user,0])['challenge_id'])
     user_dict[user]=(liked_challenges,unliked_challenges)
@@ -42,7 +43,7 @@ Fills out data for each challenge. For each challenge, want users who liked and 
 the dictionary, has a tuple with two sets: users who liked and who disliked the challenge
 '''
 challenge_dict={} # similar to user_dict, but reversed. Has two sets: users who liked and disliked the challenge
-for challenge in challenges:
+for challenge in challenges_dict:
     user_liked = set(filtering(df_likes,['challenge_id','score'],[challenge,1])['user_id'])
     user_unliked = set(filtering(df_likes,['challenge_id','score'],[challenge,0])['user_id'])
     challenge_dict[challenge]=(user_liked,user_unliked)
@@ -80,6 +81,7 @@ def similairty_index(user1, user2):
     # calculated by: challenges the both like + challenges they both dislike - challenges they disagree on / total # challenges
     return float(like_like_intersection + unlike_unlike_intersection - like_unlike_intersection) / union
 
+
 '''
 Function predicts if a user will like a certain challenge
 @param user_id - user to check
@@ -93,7 +95,6 @@ def user_like_predict(user_id, challenge_id):
     # all users who have disliked challenge
     user_unliked = set(filtering(df_likes, ['challenge_id', 'score'], [challenge_id, 0])['user_id'])
 
-    
     sum_similarity_user_liked = 0.0
     sum_similarity_user_unliked = 0.0
     # calculates similarity for current user to all other users who have liked the challenge
