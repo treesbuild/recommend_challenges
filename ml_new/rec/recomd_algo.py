@@ -3,6 +3,7 @@ import pickle
 import random
 import numpy as np
 from collections import defaultdict
+
 challenge_likes_path = r'ml_new\rec\user_challenges_likes_v2.csv' # path to user's liked paths
 challenge_data_path = r'ml_new\rec\challenges_data.csv' # type of challenge, challenge ID, and info about challenge
 cat = pd.read_csv(challenge_data_path) # challenge data
