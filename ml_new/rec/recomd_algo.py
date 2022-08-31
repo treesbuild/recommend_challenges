@@ -3,6 +3,7 @@ import pickle
 import random
 import numpy as np
 from collections import defaultdict
+import time
 
 challenge_likes_path = r'ml_new\rec\user_challenges_likes_v2.csv' # path to user's liked paths
 challenge_data_path = r'ml_new\rec\challenges_data.csv' # type of challenge, challenge ID, and info about challenge
@@ -12,8 +13,6 @@ df_likes = pd.read_csv(challenge_likes_path) # user's likes of a challenge
 df_likes['score'] = np.where(df_likes['likes']==1, 1,0) # determine the score of the challenge based on whether user likes or not
 users = df_likes['user_id'].unique() # get all users
 challenges = df_likes['challenge_id'].unique() # get all challenges
-users_dict = {i:0 for i in users}
-challenges_dict = {i:0 for i in challenges}
 
 '''
 Function used to filter our rows based on conditions. For example, can filter
@@ -32,16 +31,30 @@ def filtering(df, filter_cols,filter_conditions):
 Fills out data for each users. For each user, want their liked and disliked challenges. In
 the dictionary, has a tuple with two sets: challenges user likes and dislikes
 '''
+
+start_time = time.time()
+users_dict = {i:0 for i in users}
 user_dict = {} # user dictionary - used to store liked and disliked challenges
 for user in users_dict:
     liked_challenges = set(filtering(df_likes,['user_id','score'],[user,1])['challenge_id'])
     unliked_challenges = set(filtering(df_likes,['user_id','score'],[user,0])['challenge_id'])
     user_dict[user]=(liked_challenges,unliked_challenges)
+print(f"--- {time.time() - start_time} seconds ---")
+print('yes')
+start_time1 = time.time()
+user_dict = {} # user dictionary - used to store liked and disliked challenges
+for user in users:
+    liked_challenges = set(filtering(df_likes,['user_id','score'],[user,1])['challenge_id'])
+    unliked_challenges = set(filtering(df_likes,['user_id','score'],[user,0])['challenge_id'])
+    user_dict[user]=(liked_challenges,unliked_challenges)
+print(f"--- {time.time() - start_time1} seconds ---")
+
 
 '''
 Fills out data for each challenge. For each challenge, want users who liked and disliked it. In
 the dictionary, has a tuple with two sets: users who liked and who disliked the challenge
 '''
+challenges_dict = {i:0 for i in challenges}
 challenge_dict={} # similar to user_dict, but reversed. Has two sets: users who liked and disliked the challenge
 for challenge in challenges_dict:
     user_liked = set(filtering(df_likes,['challenge_id','score'],[challenge,1])['user_id'])
@@ -53,7 +66,7 @@ for challenge in challenges_dict:
 user_most_inter = sorted(list(df_likes['user_id'].unique()), key=lambda x: filtering(df_likes, ['user_id'], [x]).shape[0], reverse=True)
 num_most_inter = int(len(users) * 0.15) if len(users) > 50 else int(len(users) * 0.5)
 user_most_inter = user_most_inter[: num_most_inter]
-print(user_most_inter)
+# print(user_most_inter)
 new_challenge = set()
 
 '''
@@ -188,6 +201,6 @@ def recommend(user):
 
 # Run this function everyday to update user preferences on all challenges
 # rank_all()
-print(*ranking(1), sep='\n')
+# print(*ranking(1), sep='\n')
 # use knn to process the questionnaire of the user to determine which users are similar to 
 # him/her and then recommend challgenges base on that. 
