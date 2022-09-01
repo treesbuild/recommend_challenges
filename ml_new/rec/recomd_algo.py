@@ -49,7 +49,6 @@ for user in users:
     user_dict[user]=(liked_challenges,unliked_challenges)
 print(f"--- {time.time() - start_time1} seconds ---")
 
-
 '''
 Fills out data for each challenge. For each challenge, want users who liked and disliked it. In
 the dictionary, has a tuple with two sets: users who liked and who disliked the challenge
@@ -186,7 +185,6 @@ def recommend(user):
     ranks = load_pickle(r'ml_new\rec\saved_ranking_w_cat.p')
     res = defaultdict(list)
     rank = ranks['new_user'] if user not in users else ranks[user]
-    print(ranks)
     for score in rank:
         if len(res[score[2][0]]) > 0:
             if score[1] > 0.0:
