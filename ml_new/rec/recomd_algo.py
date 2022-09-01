@@ -183,9 +183,10 @@ Function recommends to user with a challenge from each category
 def recommend(user):
     df = pd.read_csv(challenge_likes_path)
     users = df['user_id'].unique()
-    ranking = load_pickle(r'ml_new\rec\saved_ranking_w_cat.p')
+    ranks = load_pickle(r'ml_new\rec\saved_ranking_w_cat.p')
     res = defaultdict(list)
-    rank = ranking['new_user'] if user not in users else ranking[user]
+    rank = ranks['new_user'] if user not in users else ranks[user]
+    print(ranks)
     for score in rank:
         if len(res[score[2][0]]) > 0:
             if score[1] > 0.0:
@@ -201,6 +202,6 @@ def recommend(user):
 
 # Run this function everyday to update user preferences on all challenges
 # rank_all()
-# print(*ranking(1), sep='\n')
+print(*recommend(1), sep='\n')
 # use knn to process the questionnaire of the user to determine which users are similar to 
 # him/her and then recommend challgenges base on that. 
