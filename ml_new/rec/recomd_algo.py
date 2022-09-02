@@ -32,22 +32,22 @@ Fills out data for each users. For each user, want their liked and disliked chal
 the dictionary, has a tuple with two sets: challenges user likes and dislikes
 '''
 
-# start_time = time.time()
+start_time = time.time()
 users_dict = {i:0 for i in users}
 user_dict = {} # user dictionary - used to store liked and disliked challenges
 for user in users_dict:
     liked_challenges = set(filtering(df_likes,['user_id','score'],[user,1])['challenge_id'])
     unliked_challenges = set(filtering(df_likes,['user_id','score'],[user,0])['challenge_id'])
     user_dict[user]=(liked_challenges,unliked_challenges)
-# print(f"--- {time.time() - start_time} seconds ---")
-# print('yes')
-# start_time1 = time.time()
-# user_dict = {} # user dictionary - used to store liked and disliked challenges
-# for user in users:
-#     liked_challenges = set(filtering(df_likes,['user_id','score'],[user,1])['challenge_id'])
-#     unliked_challenges = set(filtering(df_likes,['user_id','score'],[user,0])['challenge_id'])
-#     user_dict[user]=(liked_challenges,unliked_challenges)
-# print(f"--- {time.time() - start_time1} seconds ---")
+print(f"--- {time.time() - start_time} seconds ---")
+print('yes')
+start_time1 = time.time()
+user_dict = {} # user dictionary - used to store liked and disliked challenges
+for user in users:
+    liked_challenges = set(filtering(df_likes,['user_id','score'],[user,1])['challenge_id'])
+    unliked_challenges = set(filtering(df_likes,['user_id','score'],[user,0])['challenge_id'])
+    user_dict[user]=(liked_challenges,unliked_challenges)
+print(f"--- {time.time() - start_time1} seconds ---")
 
 '''
 Fills out data for each challenge. For each challenge, want users who liked and disliked it. In
