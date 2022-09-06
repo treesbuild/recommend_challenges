@@ -5,8 +5,6 @@ New validated changes needs to be integrated into the ml_function.
 
 Use 'python -m pipreqs.pipreqs' to generate the requirements.txt if the file is not there.
 
-Run main.py to get recommendations for an arbitary user_id
-
 The KNN is implemented in the ml-function/challenge_recommender file which is the integrated version because the KNN is not availiable here.
 
 Run rank_all function to generate the recommendations for all the users
