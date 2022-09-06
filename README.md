@@ -1,5 +1,7 @@
 # recommend_challenges
-This is for developing the model engine that recommends challenges, new validated changes needs to be integrated into the ml_function.
+This is for developing the model engine that recommends challenges.
+
+New validated changes needs to be integrated into the ml_function.
 
 Use 'python -m pipreqs.pipreqs' to generate the requirements.txt if the file is not there.
 
